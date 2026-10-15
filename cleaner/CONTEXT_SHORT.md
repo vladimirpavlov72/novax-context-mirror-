@@ -1,6 +1,24 @@
 # Cleaner — Quick Context
 
-## Status: v2.1.2+2026 — собран (2026-09-11), RuStore-папка готова: `C:\Users\Владимир\Downloads\NOVAX_Cleaner_v2.1.2+2026\` (APK + описание + скрины)
+## Status: v2.2.0+2027 — clean reminders (2026-10-15, Рома-2)
+
+Фича напоминаний по TASK_CLEANER_CLEAN_REMINDERS.md: workmanager (раз/сутки,
+inexact, без exact alarms) + flutter_local_notifications (канал reminders,
+стандартный звук); порог >500 МБ (лёгкая оценка: кэши + temp) И ≥30 дней с
+чистки; ≤1 уведомление/30 дней; opt-in диалог после ПЕРВОЙ чистки (permission
+существующим requestNotificationPermission, без повторных дёрганий); тоггл
+в настройках (по умолчанию вкл, откл отменяет задачу). Уведомление — из ARB
+по локали устройства (delegate.load в фоне без контекста).
+SharedPreferences: reminders_enabled, last_clean_timestamp,
+last_reminder_timestamp (добавлен — без него «игнор» не остановить спам),
+reminder_prompt_shown. Commit `e5db531` (master), APK arm64 19.4 МБ:
+C:\dev\releases\novax_cleaner_v2.2.0+2027_arm64.apk.
+**APK НЕ заливать в RuStore до Z-ревью и решения Владимира (бриф §8).**
+QA end-to-end (тест-форс 15 мин + backdated timestamp) — ожидает A52.
+Toolchain не тронут (3.24/SDK34). Отступления от брифа: ①
+last_reminder_timestamp (обосновано); ② фон-оценка мусора — кэши+temp, не
+полный скан (батарея, занижает); ③ 10 не-en/ru локалей — англ. плейсхолдеры
+(конвенция проекта).
 ## Repo: github.com/vladimirpavlov72/novax-cleaner (private)
 ## Package: com.novax.cleaner
 ## App ID RuStore: 2063733453
