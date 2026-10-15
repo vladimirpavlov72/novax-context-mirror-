@@ -9,7 +9,7 @@
 | Агент | Команда пробуждения | Роль | Статус |
 |---|---|---|---|
 | **Рома-Грузия** (помощник Владимира) | `kimi -S [СКРЫТО:ID]` | Штурман: карта проекта, брифы, связка всех, коммиты контекста | Активен |
-| **Рома-2** (код) | `kimi -S [СКРЫТО:ID]` | ЕДИНСТВЕННЫЙ кодовый агент. Пилил RuStore-APK с самого начала, потом GP-flavors. Очередь: ① Habits-уведомления/refund (GP), ② Cleaner reminders (RuStore) — `cleaner/TASK_CLEANER_CLEAN_REMINDERS.md`, ③ Cleaner APK для Samsung/Huawei — `stores/TASK_CLEANER_SAMSUNG_HUAWEI.md` | Активен |
+| **Рома-2** (код) | `kimi -S [СКРЫТО:ID]` | ЕДИНСТВЕННЫЙ кодовый агент. Пилил RuStore-APK с самого начала, потом GP-flavors. Очередь: ① Habits-уведомления/refund (GP) — доделать, ② Cleaner: лимит 300МБ/30дн (Тема 7) — `cleaner/TASK_CLEANER_FREE_LIMIT.md` → v2.3.0+2030, ③ Cleaner APK Samsung/Huawei — `stores/TASK_CLEANER_SAMSUNG_HUAWEI.md` | Активен |
 | **Рома-маркетинг** | `kimi -r [СКРЫТО:ID]` | Исполнитель TASK-файлов (тексты, ASO, витрины). Почта: `marketing/tasks/Общение Рома Грузия - РомаМаркетинг.txt` | Активен |
 | **VPN/VPS** | `kimi -r [СКРЫТО:ID]` | AEZA-сервер, цепочка к Bright Data, прокси-шлюз | Ожидает IP+root от Владимира |
 | **К3-Макс** (браузерный Kimi) | загрузчик `K3_start_Макс_v2.txt` | Стратег и оппонент: обсуждения с Владимиром, проверка планов/текстов, региональное продвижение | Активен |
