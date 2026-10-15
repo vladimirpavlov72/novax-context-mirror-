@@ -11,7 +11,7 @@ inexact, без exact alarms) + flutter_local_notifications (канал reminder
 по локали устройства (delegate.load в фоне без контекста).
 SharedPreferences: reminders_enabled, last_clean_timestamp,
 last_reminder_timestamp (добавлен — без него «игнор» не остановить спам),
-reminder_prompt_shown. Commit `e5db531` (master), APK arm64 19.4 МБ:
+reminder_prompt_shown. Z-ревью пройдено (3 бага фонового изолята — все исправлены), **QA end-to-end на A52 пройден полностью** (чеклист §7: opt-in после первой чистки, системный запрос, гейт мусора отрицательно И положительно, уведомление RU-локализованное, tap → приложение, штамп last_reminder, тоггл отменяет/возобновляет воркер). QA-found баг №4: Platform.localeName="ru_RU" ломал ARB-загрузку в фоне → парсинг + en-фолбэк. Финальные коммиты: `e5db531` (фича) + `1c3f76a` (Z/QA-фиксы). APK arm64 19.4 МБ:
 C:\dev\releases\novax_cleaner_v2.2.0+2027_arm64.apk.
 **APK НЕ заливать в RuStore до Z-ревью и решения Владимира (бриф §8).**
 QA end-to-end (тест-форс 15 мин + backdated timestamp) — ожидает A52.
@@ -51,11 +51,14 @@ last_reminder_timestamp (обосновано); ② фон-оценка мусо
 - **Note:** v2.0.2+22 — последняя опубликованная в RuStore версия.
 
 ## Next
-1. **Cleaner reminders: код готов (15.10, Рома-2, коммит `e5db531`)** — APK v2.2.0+2027
-   в `C:\dev\releases\`, работает ветка `stores/TASK_CLEANER_SAMSUNG_HUAWEI.md`.
-   Ждёт: ① QA end-to-end на A52 (нужен подключённый телефон, тест-форс 15 мин),
-   ② Z-ревью, ③ решение Владимира. В RuStore НЕ заливать.
-   Отступления Ромы-2 (согласованы мной): ключ `last_reminder_timestamp`,
-   лёгкая фоновая оценка мусора (кэши+temp, занижает), 10 локалей — EN-плейсхолдеры.
+1. **Cleaner reminders: ГОТОВО К РЕЛИЗУ (15.10 вечер, Рома-2)** — QA A52 PASSED,
+   Z-ревью PASSED (3 бага фонового изолята исправлены: initialize() уведомлений,
+   локаль ru_RU, BackgroundIsolateBinaryMessenger). Коммиты `e5db531`+`1c3f76a`,
+   APK v2.2.0+2027 финальный в `C:\dev\releases\`.
+   ⏳ **Осталось: заливка в RuStore — руками Владимира** (консоль RuStore с HP,
+   обычный интернет; рекомендация штурмана: заливать). Рома-2 переключён на
+   уведомления Habits (блокер GP).
+   Известные не-блокеры: ребут-ресilienс не гонялся физически (WorkManager
+   persisted по дизайну); 10 локалей — EN-плейсхолдеры (RU/EN полные).
 2. Мониторинг, отзывы, ASO-обновления.
 3. Sandbox-платежи и метрики после стабилизации загрузок.
