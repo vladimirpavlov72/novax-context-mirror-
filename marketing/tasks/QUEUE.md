@@ -8,5 +8,5 @@
 | 001 | Привычки +: честные тексты карточки (30→7 дней) | tasks/TASK_001_habits_card_texts.md | DONE | 09.10: принято Гиа (9/10), commit 86e138a; CONSOLE_PASTE_Habits_RU.md у Владимира на вставку |
 | 002 | Привычки +: триал 30→7 в TERMS_OF_USE + CARD_CONTENT | tasks/TASK_002_trial_30_to_7.md | DONE | 09.10: принято Гиа (9/10), commit ed7ab78; en dash = известная мелочь, не блокер; ждём ревью К3 |
 | 003 | GP-витрина: тексты карточек QR→H₂O→Habits (EN+RU) + ТЗ дизайнеру на баннер | tasks/TASK_003_GP_vitrina.md | DONE | 17.10: сдан Ромой-маркетингом (6 CONSOLE_PASTE + 3 скрин-брифа + баннер-бэклог, commit 651b248); ждём оппонента К3-Макс |
-| 004 | Cleaner для Samsung/Huawei: ASO-тексты бесплатной v1 + ТЗ на скрины без пейвола | tasks/TASK_004_altstores_free_aso.md | TODO | 15.10: выдана после Темы 2 (К3-Макс); формула «Полностью бесплатно»; EN+RU; НЕ копировать RuStore-ASO с ценой |
+| 004 | Cleaner для Samsung/Huawei: ASO-тексты бесплатной v1 + ТЗ на скрины без пейвола | tasks/TASK_004_altstores_free_aso.md | DONE | 17.10: сдан Ромой-маркетингом (4 CONSOLE_PASTE + ТЗ на скрины, commit); ждём оппонента К3-Макс |
 | 005 | Карточка Cleaner RuStore под модель «300 МБ/30 дней» (12 локалей) | tasks/TASK_005_cleaner_card_v2.3.0.md | DONE | 17.10: сдан Ромой-маркетингом (пакет 12 локалей + in-app + ТЗ на скрины); ждём оппонента К3-Макс и ответа Гиа |
