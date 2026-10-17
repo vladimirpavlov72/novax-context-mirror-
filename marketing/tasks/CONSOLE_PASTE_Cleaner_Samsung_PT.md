@@ -33,7 +33,7 @@ Sem anúncios, sem taxas ocultas, sem conta. Seus dados ficam no dispositivo; o 
 
 NOVAX é um estúdio independente. Quatro apps, um modelo honesto.
 
-Política de privacidade: https://novaxhub.ru/cleaner/privacy
+Política de privacidade: https://novaxhub.ru/privacy/
 ```
 
 ## Keywords

@@ -35,5 +35,5 @@ No ads, no hidden fees, no account. Your data stays on your device, and the app 
 
 NOVAX is an independent studio. Four apps, one honest model.
 
-Privacy policy: https://novaxhub.ru/cleaner/privacy
+Privacy policy: https://novaxhub.ru/privacy/
 ```

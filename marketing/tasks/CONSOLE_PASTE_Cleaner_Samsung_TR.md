@@ -33,7 +33,7 @@ Reklamsız, gizli ücret yok, hesap yok. Verileriniz cihazınızda kalır; uygul
 
 NOVAX bağımsız bir stüdyodur. Dört uygulama, tek dürüst model.
 
-Gizlilik politikası: https://novaxhub.ru/cleaner/privacy
+Gizlilik politikası: https://novaxhub.ru/privacy/
 ```
 
 ## Keywords

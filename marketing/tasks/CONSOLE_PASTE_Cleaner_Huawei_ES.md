@@ -33,7 +33,7 @@ Sin anuncios, sin cargos ocultos, sin cuenta. Tus datos se quedan en el disposit
 
 NOVAX es un estudio independiente. Cuatro apps, un modelo honesto.
 
-Política de privacidad: https://novaxhub.ru/cleaner/privacy
+Política de privacidad: https://novaxhub.ru/privacy/
 ```
 
 ## Keywords

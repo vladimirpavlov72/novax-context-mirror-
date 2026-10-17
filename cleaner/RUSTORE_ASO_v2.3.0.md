@@ -37,6 +37,8 @@ NOVAX Cleaner — простое приложение для очистки Andr
 Как устроена модель — честно:
 Сканирование всегда бесплатно: сначала видишь, что и сколько можно освободить. Чистка до 300 МБ бесплатна — раз в 30 дней. Нужно больше — полная чистка без лимита стоит 159 ₽ один раз. Навсегда, со всеми обновлениями.
 
+Что входит в бесплатную чистку: кэш приложений, системный мусор, старые загрузки. Дубликаты фото и большие файлы — в полной версии.
+
 Что умеет:
 • Анализ памяти: покажет, что занимает больше всего места
 • Очистка кэша приложений и системного мусора
@@ -80,6 +82,8 @@ Phone is slow and storage is full? Cleaner shows exactly what's taking up space:
 
 How the model works — honestly:
 Scanning is always free: you see what and how much can be freed up first. Cleanup of up to 300 MB is free — once every 30 days. Need more? Unlimited cleanup costs a small one-time payment. Forever, with all future updates.
+
+Free cleanup covers: app cache, system junk, old downloads. Duplicate photos and large files — in the full version.
 
 Features:
 • Storage analysis: see what's taking up the most space

@@ -33,7 +33,7 @@ NOVAX Cleaner تطبيق بسيط لتنظيف أندرويد. مجاني بال
 
 NOVAX استوديو مستقل. أربعة تطبيقات، نموذج واحد صادق.
 
-سياسة الخصوصية: https://novaxhub.ru/cleaner/privacy
+سياسة الخصوصية: https://novaxhub.ru/privacy/
 ```
 
 ## Keywords

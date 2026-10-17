@@ -30,7 +30,7 @@ What it does:
 • Works offline, no account
 
 Honest price:
-$2.99 once. No subscription, no ads, no hidden fees.
+Free for 7 days, then $2.99 once. No subscription, no ads, no hidden fees.
 
 We hate subscriptions. We ask once. Always.
 Your data stays on your device. No analytics, no cloud.

@@ -33,7 +33,7 @@ Keine Werbung, keine versteckten Kosten, kein Konto. Deine Daten bleiben auf dem
 
 NOVAX ist ein unabhängiges Studio. Vier Apps, ein ehrliches Modell.
 
-Datenschutzerklärung: https://novaxhub.ru/cleaner/privacy
+Datenschutzerklärung: https://novaxhub.ru/privacy/
 ```
 
 ## Keywords
