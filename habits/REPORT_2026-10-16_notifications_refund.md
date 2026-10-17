@@ -53,3 +53,45 @@ premium (GP-политика); пустой список покупок — НЕ
 - Пересборка релизов после Z-ок (Habits +13 или +14 — решить судьбу висящего
   на модерации RuStore +13).
 - Sandbox-проверка refund на реальном сторе.
+
+
+---
+
+## Appendix: Z-ответы внесены (17.10, коммиты a2a6a78 + 531ff3d)
+
+Z-ревью пакета `reviews/habits_notifications_refund/` пройдено, правки внесены:
+
+- **Блокер 04 (helper на iOS/web):** кнопка-помощник обёрнута в
+  `if (!kIsWeb && Platform.isAndroid)` — MissingPluginException больше
+  недостижим на не-Android платформах.
+- **02 MainActivity:** `Settings.EXTRA_APP_PACKAGE` /
+  `Settings.ACTION_APP_NOTIFICATION_SETTINGS` вместо hardcoded строк;
+  порядок fallback перевёрнут (сначала страница уведомлений — это цель
+  кнопки); catch сужен до ActivityNotFoundException + SecurityException.
+- **06 GP lookupPurchase (и порт в H₂O/QR):** ветка параллельного restore
+  теперь возвращает `revoked`, когда `_restoreRevoked == true`
+  (раньше молча сводилось к `notFound`).
+- **08 (Q3) снэкбар об отзыве:** `PremiumState.revokedNotice` (one-shot
+  флаг) → одноразовый неблокирующий snackbar в SettingsScreen с кнопкой
+  повторной покупки (PaywallScreen). Портировано в H₂O и QR
+  (`premiumRevokedNotice` ARB: Habits en/ru, H₂O en/ru, QR — 12 локалей).
+- **09 ARB en:** «Unrestricted» в ASCII-кавычках вместо ёлочек.
+- **Блокер 10 (H₂O RuStore):** `_isRevokedState` выровнен с Habits/QR —
+  старый SDK (flutter_rustore_billing 0.0.5) не имеет констант
+  REFUNDED/REJECTED/REVERSED/TERMINATED → сравнение литералами
+  (defensive, raw-строка от бэкенда может их нести).
+- **Архитектурный блокер GP refund-path (мёртв на GP):** задокументирован,
+  код не менял — GP не возвращает refunded non-consumables через restore;
+  вариант с сервером (RTDN) отсутствует по архитектуре (offline-only,
+  NOVAX rules). Риск GP-страйка принят на уровне решения 09.10;
+  на RuStore отзыв работает (6 статусов).
+- Ответы Z: Q1 — декларация USE_EXACT_ALARM в GP-консоли по шаблону Z
+  («Будильник или напоминание о времени» + скрин списка напоминаний);
+  Q2 — pending = notFound (семантически верно, покрыто таймаутом);
+  Q3 — снэкбар (внедрено); Q4 — блокеры выше закрыты.
+- analyze: 0 errors на всех трёх приложениях.
+- P2-юнит-тесты `_isRevokedStatus`/`_isSuccessfulStatus` — не делались
+  (ред-линия «минимум пакетов», тестовая инфраструктура отсутствует) —
+  зафиксировано как осознанный техдолг.
+
+- Session ID: [СКРЫТО:ID]
