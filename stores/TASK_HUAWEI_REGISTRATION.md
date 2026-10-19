@@ -91,3 +91,30 @@ Huawei** (единый с Samsung/GP; выплаты на Credo без тике�
 Статус: на паузе до DUNS + короткого вердикта К3-Макса (факт геоблока
 отправлен, переворачивает ли он Тему 2). ID Huawei (Грузия) создан и ждёт —
 ничего необратимого не сделано.
+
+## РЕШЕНО 19.10 вечер (К3+Владимир): ГРУЗИНСКИЙ контур, тип «Предприятие», после DUNS
+
+### План
+1. ⏳ DUNS (~01.11; задержка >2 недель → пинок D&B через Interfax-Kazakhstan)
+2. 📄 Документы Предприятия готовить ЗАРАНЕЕ: свидетельство ИП Грузия,
+   паспорт, данные Credo (для выплат) — всё в KeePassXC/конверте
+3. 📨 ТИКЕТ Support Desk — можно подать УЖЕ СЕЙЧАС (Huawei ID создан):
+   текст ниже. Ответ придёт ДО DUNS → закроет последний вопрос
+4. После DUNS: регистрация «Предприятие» → имя разработчика NOVAX →
+   верификация (1–3 дня) → карточка Cleaner (тексты готовы: TASK_004)
+
+### Текст тикета (переписан под новый контур, 19.10)
+Category: Monetization / Payments
+Subject: Payouts & user payments — Georgian sole proprietorship (Enterprise)
+
+I am registering as an Enterprise developer (Georgian sole proprietorship,
+DUNS pending). Before completing setup I need to confirm:
+1. Can app revenue be paid to a business bank account in Georgia
+   (Credo Bank, Tbilisi)? Which payout methods are supported for Georgia?
+2. Will users in Russia be able to purchase in-app items (MIR / SBP /
+   mobile billing) if the developer entity is Georgian? Any restrictions?
+3. Is there a list of countries where paid apps/IAP are unavailable for
+   Georgian-registered developers?
+4. What documents are required for Enterprise verification of a Georgian
+   sole proprietorship (certificate of registration, DUNS)?
+Account email: [СКРЫТО:EMAIL]
