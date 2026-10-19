@@ -44,3 +44,38 @@
 ## Красные линии
 - Huawei-аккаунт живёт на HP обычной жизнью, в грузинские профили не лезет.
 - Пароли/ключи кабинета — только в менеджере Владимира, никуда не пересылать.
+
+## Обновление 20.10: ответ Huawei получен — вопрос переезжает в тикеты
+
+Письмо на [СКРЫТО:EMAIL] (18.10) → ответ 19.10: «денежные вопросы —
+через Support Desk: https://developer.huawei.com/consumer/en/support/feedback/#/».
+Это стандартная процедура, не отказ. План:
+1. Завести Huawei ID на [СКРЫТО:EMAIL] (не обязывает).
+2. Подать тикет с текстом ниже (подготовлен).
+3. Параллельно — регистрация разработчика РФ-контур (выплаты не блокер
+   бесплатной v1; решение Темы 2).
+
+### Текст тикета (копировать в форму обратной связи)
+Category: Monetization / Payments
+Subject: App revenue payouts — Russian developer with Georgian business account
+
+I am an individual developer preparing to publish a free app on AppGallery
+(HMS IAP Kit planned later). Before registration I must confirm payout
+options, because the account country cannot be changed after registration
+and SWIFT to Russian banks is unavailable.
+
+Situation: Russian citizen and sole proprietor in Russia; I also hold a
+sole proprietorship in Georgia with a business account (Credo Bank, Tbilisi).
+
+Questions:
+1. Does Huawei pay app revenue to Russian developers' bank accounts in
+   Russia? If yes — which methods (RUB local transfer, MIR, card payout)?
+2. Can payouts go to a Georgian business bank account if the developer
+   account country is Russia? What documents are required?
+3. Should I instead register the developer account under the Georgian
+   entity? Pros and cons?
+
+The payout method determines my account setup. A detailed answer would be
+much appreciated.
+
+Account email: [СКРЫТО:EMAIL]
