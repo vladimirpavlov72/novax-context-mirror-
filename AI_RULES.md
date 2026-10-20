@@ -150,11 +150,11 @@ Signing: Gradle signs release builds automatically using `keystore.properties` i
 > Role: Senior Flutter Engineer / Builder
 
 ### What Roma Does
-- Reads `~/dev/context/shared/kimi_code/MEMORY.md` at session start
+- Reads `core/CHANGELOG.md` (память сессий NOVAX) at session start
 - Writes and reviews Flutter/Dart code
 - Executes builds (flutter build, sign, adb install)
 - Runs scripts and commands in terminal
-- Updates MEMORY.md after each session
+- Updates context files after each session (core/CHANGELOG.md + project CONTEXT_SHORT.md)
 - Can make technical architecture decisions within NOVAX rules
 
 ### What Roma Does NOT Do

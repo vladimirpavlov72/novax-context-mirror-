@@ -20,7 +20,7 @@
 
 ### 1. Приложение (APK)
 - [ ] Консоль RuStore → NOVAX Cleaner → Версии → Загрузить → APK из папки релиза
-- [ ] Версия: 2.3.0, versionCode 2030 (консоль подхватит из APK)
+- [ ] Версия: 2.3.0, versionCode 4030 (arm64-APK; сдвиг split-per-abi от base 2030; консоль подхватит из APK)
 
 ### 2. Карточка (тексты)
 - [ ] Открыть `marketing\tasks\CONSOLE_PASTE_Cleaner_RU_v2.3.0.md`

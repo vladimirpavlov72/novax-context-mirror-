@@ -9,7 +9,8 @@
 ## 🔄 Синхронизация 20.10 (итоги 18–20.10)
 
 - **Релиз Cleaner v2.3.0 — на финальной прямой**: Z утвердил дельту-2 (20.10).
-  Карточка RuStore финальная: папка `C:\develeases\RELEASE_Cleaner_v2.3.0+2030_2026-10-19\`
+  Карточка RuStore финальная: папка `C:\dev
+eleases\RELEASE_Cleaner_v2.3.0+2030_2026-10-19\`
   (CARD_RU.md — short/full/changelog/FAQ, фактчек Ромы-2 пройден). Завтра: Рома-2
   вносит строку первого диалога («Первая чистка бесплатна, без лимита.», БЕЗ денег)
   → пересборка → ок Z → Владимир заливает. Модель: v2/v3 — первая чистка бесплатно
@@ -24,7 +25,8 @@
   stores/STORES_REGIONAL_PROMO.md.
 - **TG-мост запущен**: @novax_gia_bot. Слушает (poll) ТОЛЬКО Гиа; отправка (send)
   всем, сообщение начинается с имени. Скрипт tools/tg_bridge.py.
-- **Правило единой папки релиза**: `C:\develeases\RELEASE_<App>_<version>_<ГГГГ-ММ-ДД>\`.
+- **Правило единой папки релиза**: `C:\dev
+eleases\RELEASE_<App>_<version>_<ГГГГ-ММ-ДД>\`.
 - **Правила текстов Владимира**: без «честно», без «мы просим», без цифр лимита в
   карточках, деньги НЕ на первом экране (пейвол в точке лимита), именные подписи.
 - К3-Макс: дискуссия 1–7 закрыта; схема связки оценена 7/10→улучшена (автосинк
@@ -58,10 +60,10 @@
 ## Быстрые ссылки
 
 - Грузия: `georgia/` (MASTER_PLAN, TBILISI_OPS_PLAN, INFRA, KYC_STORY, TASK1, TASK2, REPORT)
-- GP-план: `GOOGLE_PLAY_PLAN.md`, `gplay/CONTEXT_GPLAY.md`, `stores/SAMSUNG_HUAWEI_PLAN.md`
+- GP-план: `gplay/CONTEXT_SHORT.md` (резерв, НЕ ТРОГАТЬ), `stores/SAMSUNG_HUAWEI_PLAN.md`
 - Сайт: VPS `[СКРЫТО:IP]`, 13 интент-лендингов, ASO готовы (см. SITES.md)
 
-- **Текущий стратегический фокус**: (1) параллельный GP-проект для Habits/H₂O/QR — план `GOOGLE_PLAY_PLAN.md` (отдельные репо в `C:\dev\apps\gplay\`, ИП Грузии = org-аккаунт, $2.99, ru-язык оставляем, порядок QR→H₂O→Habits, Cleaner — позже); (2) подготовка к Тбилиси (вылет середина/конец сентября); (3) 4 APK залиты в RuStore на модерацию 14.09.
+- **Текущий стратегический фокус** (состояние на середину сентября, история): (1) GP-трек на flavors-подходе (решение 09.10: единый код, gplay-копии в `C:\dev\apps\gplay\` = РЕЗЕРВ, НЕ ТРОГАТЬ; ИП Грузии = org-аккаунт, $2.99, порядок QR→H₂O→Habits, Cleaner — позже); (2) подготовка к Тбилиси (поездка ✅ 29.09–02.10, отчёт `georgia/REPORT_TBILISI`); (3) 4 APK залиты в RuStore на модерацию 14.09.
 - **RuStore**: на модерации Habits +13, H₂O 1.0.1+2027, Cleaner +2026, QR 2.1.0+2027. Опубликованные: Habits +10, H₂O 1.0.0 (код 2012), Cleaner +22, QR +10.
 - **GP-этап 1 (QR) ✅ 14.09**: `C:\dev\apps\gplay\novax-qr-scanner` собран на Flutter 3.47.4 (`C:\dev\flutter_gp`, отдельно от RuStore 3.24) — Gradle 8.14.3/AGP 8.12/Kotlin 2.2.20, SDK 36+NDK r28, биллинг on in_app_purchase ($2.99), RuStore вычищен (код+тексты 12 локалей), QA на A52 пройден, коммит `df9a6a3`. Дальше по шаблону: H₂O → Habits.
 - **Сайт**: сайт `novaxhub.ru` мигрирован на собственный VPS `[СКРЫТО:IP]` (nginx + SSL). Создано и задеплоено 13 интент-лендингов (9 P0 + 4 P1): `/telefon-tormozit/`, `/malo-pamyati/`, `/zabyvayu-pit-vodu/`, `/kak-vyrabotat-privychku/`, `/qr-ne-skaniruetsya/`, `/pamyat-telefona-zapolnena/`, `/tracker-vody/`, `/prilozhenie-dlya-privychek/`, `/skaner-qr-koda/`, `/ocistit-telefon-ot-musora/`, `/napominanie-pit-vodu/`, `/kak-ne-brosit-privychku/`, `/sozdat-qr-kod/`. Обновлены `llms.txt` (22 URL в `sitemap.xml`), `/llms/apps.json`, `/llms/intents.json`. Подготовлены ASO-тексты для Cleaner, QR, Habits+, H₂O. См. `SITES.md`, `app/INTENT_RESEARCH.md`, `app/INTENT_LANDING_PLAN.md`, `app/GEO_TEST_RESULTS.md`.
