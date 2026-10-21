@@ -1,8 +1,8 @@
 # Cleaner — Quick Context
 
-## Status: v2.2.0+2027 — clean reminders (2026-10-15, Рома-2)
+## Status: v2.3.0+2030 (base) / arm64 4030 — на модерации RuStore с 20.10, auto 100% (эталон: CONTEXT_SHORT «Синхронизация 20.10»). v2.2.0+2027 (clean reminders) вошло в v2.3.0.
 
-Фича напоминаний по TASK_CLEANER_CLEAN_REMINDERS.md: workmanager (раз/сутки,
+Фича напоминаний (архивный TASK_CLEANER_CLEAN_REMINDERS.md, выполнено 15.10): workmanager (раз/сутки,
 inexact, без exact alarms) + flutter_local_notifications (канал reminders,
 стандартный звук); порог >500 МБ (лёгкая оценка: кэши + temp) И ≥30 дней с
 чистки; ≤1 уведомление/30 дней; opt-in диалог после ПЕРВОЙ чистки (permission

@@ -1,14 +1,14 @@
 # NOVAX Habits — Quick Context
 
 > 30-second read for agents. Source of truth for the latest app state.
-> Last updated: 2026-10-09 (flavors-завершение + решения Владимира+Z)
+> Last updated: 2026-10-20 (блокеры уведомлений/модерации закрыты 16.10 — внесено Джумой по визе Гиа)
 
 ---
 
 ## ⚡ Google Play — актуальный трек (важно!)
 
 **Два параллельных подхода существуют — выбор архитектуры за Владимиром (запрос 07.10):**
-1. **gplay-копии (активный, чат «GP-этапы», 14.09)**: отдельные репо `C:\dev\apps\gplay\novax_habits|novax_h2o|novax-qr-scanner`, свой Flutter 3.47.4 (`C:\dev\flutter_gp`), SDK 36 (требование GP!), биллинг переписан на in_app_purchase, RuStore вычищен, QA на A52 пройден, коммиты: Habits `3f4dcbc`+`7590280`, H₂O `8478512`, QR `df9a6a3`. Контекст: `gplay/CONTEXT_GPLAY.md`, `gplay/CONTEXT_SHORT.md`.
+1. **gplay-копии (РЕЗЕРВ, НЕ ТРОГАТЬ — решение 09.10; история 14.09)**: отдельные репо `C:\dev\apps\gplay\novax_habits|novax_h2o|novax-qr-scanner`, свой Flutter 3.47.4 (`C:\dev\flutter_gp`), SDK 36 (требование GP!), биллинг переписан на in_app_purchase, RuStore вычищен, QA на A52 пройден, коммиты: Habits `3f4dcbc`+`7590280`, H₂O `8478512`, QR `df9a6a3`. Контекст: `gplay/CONTEXT_GPLAY.md`, `gplay/CONTEXT_SHORT.md`.
 2. **Flavors в основном репо (наш эксперимент, 28.09)**: ветка **`feature/play-flavors`** в `C:\dev\apps\novax_habits` (НЕ master): flavors rustore/play, BillingRepository-абстракция, GooglePlayBillingRepository, AAB собран, Z-ревью пройдено. Master репо НЕ тронут (HEAD `a9856dc`). Плюс flavors: единый код, фиксы не дублируются. Минус: toolchain Flutter 3.24/targetSdk 34 — для GP нужен SDK 36 (надо поднимать).
 
 **РЕШЕНО Владимиром 07.10: flavors в основных репо (подход №2). Трек ЗАВЕРШЁН 09.10:**
@@ -75,8 +75,8 @@ AAB play v1.0.0+13 собран (releases). Пейвол: манифест пр�
 
 | # | Blocker | Owner | Impact |
 |---|---------|-------|--------|
-| 1 | **Notifications не срабатывают** на A52 даже при выданных разрешениях | Z-review / Roma | Нельзя релизить без рабочих напоминаний. Папка ревью: `C:\dev\novax-context-main\reviews\habits_v1.0.0+11\QUESTIONS_FOR_Z.md` |
-| 2 | RuStore moderation rejection: «Платная категория, но не указана цена» | Vladimir / RuStore Support | Нужно сменить тип монетизации на Free в консоли перед повторной заливкой. |
+| 1 | ~~Notifications не срабатывают на A52~~ ✅ ЗАКРЫТО 16.10 (REPORT_notifications_refund: USE_EXACT_ALARM, exact-режим, QA A52 пройден) | Roma | Закрыто. |
+| 2 | ~~RuStore moderation rejection~~ ✅ ЗАКРЫТО: +13 ОПУБЛИКОВАН 13.10.2026, 100% аудитории (аудит 16.10) | Vladimir | Закрыто. |
 | 3 | Adaptive Android icon vector asset | Designer | Не критично для повторной модерации. |
 
 ---
@@ -114,12 +114,12 @@ adb -s RZ8R409QVQB install -r C:/dev/releases/novax_habits_v1.0.0+13_arm64.apk
 
 ## Next Steps (short term)
 
-1. **WAIT:** Ответ Z по уведомлениям. Применить fix, пересобрать, протестить на A52.
-2. **WAIT:** Ответ RuStore support по типу монетизации.
+1. ✅ ГОТОВО 16.10: уведомления (USE_EXACT_ALARM) — QA на A52 пройден, отчёт `habits/REPORT_2026-10-16_notifications_refund.md`.
+2. ✅ ГОТОВО: +13 опубликован 13.10.
 3. После фикса уведомлений — полный QA: фильтрация по дням, своё время, иконки, напоминание.
 4. Проверить notifications в H₂O (аналогичная проблема возможна).
 5. Переснять RuStore-скриншоты с новой функциональностью.
-6. Залить v1.0.0+13 в RuStore на модерацию (папка `NOVAX_Habits_v1.0.0+13` в Downloads готова).
+6. ✅ ГОТОВО: +13 залит и опубликован 13.10.2026.
 
 ---
 

@@ -1,6 +1,6 @@
 # NOVAX H2O — Quick Context
 
-## Status: v1.0.1+2027 — собран (2026-09-14), RuStore-папка готова: `C:\Users\Владимир\Downloads\NOVAX_H2O_v1.0.1+2027\` (Владимир заливает).
+## Status: v1.0.1+2027 — ОПУБЛИКОВАН в RuStore 24.09.2026, 100% аудитории (аудит Ворка 16.10; первая попытка 14.09 отклонена — versionCode 2012 → годовые коды от 2027+).
 ## Package: `com.novax.h2o`
 ## Price: 159₽ one-time. Trial: 7 days. NO subscriptions.
 ## ⚠️ Version Code: предыдущая версия в RuStore имела versionCode 2012 → все коды отныне **годовые, от 2027 и выше** (решение Владимира). НИКОГДА не опускать код ниже 2027.
@@ -65,5 +65,6 @@
 
 Flavors-ветка `feature/play-flavors` в основном репо ЗАВЕРШЕНА: SDK 36,
 BillingRepository (rustore/GP), Z-ревью + QA пройдены, AAB play + APK rustore
-собраны (`C:\develeases\`). Пейвол: манифест против подписки с ценами по
+собраны (`C:\dev
+eleases\`). Пейвол: манифест против подписки с ценами по
 флейвору. Подробности — `core/CHANGELOG.md` (записи 08–09.10) и DECISIONS.md.
