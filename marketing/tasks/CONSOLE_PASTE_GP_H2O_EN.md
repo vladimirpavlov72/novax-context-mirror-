@@ -31,6 +31,7 @@ What it does:
 
 Honest price:
 Free for 7 days, then $2.99 once. No subscription, no ads, no hidden fees.
+Subscription: ~~$29.99/yr~~ → One-time: $2.99
 
 We hate subscriptions. We ask once. Always.
 Your data stays on your device. No account, no analytics, works offline.
