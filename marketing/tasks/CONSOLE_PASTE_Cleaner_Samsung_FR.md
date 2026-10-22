@@ -8,11 +8,13 @@
 NOVAX Cleaner — Nettoyage
 ```
 
-## Short description (≤80)
+## Short description (≤40 БАЙТ — лимит Samsung Galaxy Store)
 
 ```
-Libérez de l'espace, gagnez en vitesse. 100% gratuit. Sans pub ni abonnement.
+Nettoyeur gratuit. Sans pub.
 ```
+
+*(B1, спринт: 28 байт UTF-8, посчитано программно; кириллица/арабский = 2 байта)*
 
 ## Full description
 

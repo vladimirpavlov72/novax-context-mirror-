@@ -8,11 +8,13 @@
 NOVAX Cleaner — limpiador
 ```
 
-## Short description (≤80)
+## Short description (≤40 БАЙТ — лимит Samsung Galaxy Store)
 
 ```
-Libera espacio y velocidad. Totalmente gratis. Sin anuncios ni suscripciones.
+Limpiador de teléfono gratis
 ```
+
+*(B1, спринт: 29 байт UTF-8, посчитано программно; кириллица/арабский = 2 байта)*
 
 ## Full description
 

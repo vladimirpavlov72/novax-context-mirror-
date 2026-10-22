@@ -8,11 +8,13 @@
 NOVAX Cleaner — Temizleyici
 ```
 
-## Short description (≤80)
+## Short description (≤40 БАЙТ — лимит Samsung Galaxy Store)
 
 ```
-Telefonunuzu hızlandırın, yer açın. Tamamen ücretsiz. Reklamsız, abonesiz.
+Ücretsiz temizleyici. Reklamsız.
 ```
+
+*(B1, спринт: 34 байт UTF-8, посчитано программно; кириллица/арабский = 2 байта)*
 
 ## Full description
 

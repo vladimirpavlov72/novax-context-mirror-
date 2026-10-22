@@ -10,11 +10,13 @@
 NOVAX Cleaner — clean storage
 ```
 
-## Short description (≤80)
+## Short description (≤40 БАЙТ — лимит Samsung Galaxy Store)
 
 ```
-Free up space, speed up your phone. Completely free. No ads, no subscriptions.
+Free phone cleaner. No ads.
 ```
+
+*(B1, спринт: 27 байт UTF-8, посчитано программно; кириллица/арабский = 2 байта)*
 
 ## Full description
 
