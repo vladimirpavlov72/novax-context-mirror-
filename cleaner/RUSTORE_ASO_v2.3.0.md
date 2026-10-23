@@ -78,9 +78,9 @@ NOVAX Cleaner is a simple Android cleaner. No ads, no subscriptions, no data col
 Phone is slow and storage is full? Cleaner shows exactly what's taking up space: an honest scan first, cleanup second.
 
 How the model works — honestly:
-Scanning is always free: you see what and how much can be freed up first. Cleanup of up to 300 MB is free — once every 30 days. Need more? Unlimited cleanup costs a small one-time payment. Forever, with all future updates.
+Scanning is always free: you see what and how much can be freed up first. Your first cleanup is completely free, with no limit — everything found gets removed. After that, up to 300 MB is free once every 30 days. Unlimited cleanup forever costs a small one-time payment. Forever, with all future updates.
 
-Free cleanup covers: app cache, system junk, old downloads. Duplicate photos and large files — in the full version.
+Good to know: the first free cleanup includes everything — cache, duplicates, large files. After it, the free 300 MB covers cache, junk and downloads; duplicates and large files are in the full version.
 
 Features:
 • Storage analysis: see what's taking up the most space
