@@ -127,7 +127,11 @@
 - **Влияние:** при установке APK с versionCode НИЖЕ установленного `adb install -r`
   возвращает Success, но приложение НЕ обновляется — QA на старой версии без явного сигнала.
 - **Обходное решение:** вериф после установки: `dumpsys package <id> | grep versionCode`
-  (+ lastUpdateTime), сравнить с целевым APK.
+  (+ lastUpdateTime), сравнить с целевым APK. ⚠ Усилено 24.10: downgrade
+  ТОЛЬКО через uninstall+install; install -r поверх ВЫСШЕГО versionCode
+  молча не применяется (Success врёт), dumpsys сразу после может врать
+  двояко — верифить дважды с интервалом. Инструментальное: Dart-строки
+  release-APK ищутся не в classes.dex, а в lib/arm64-v8a/libapp.so.
 - **Постоянное решение:** QA-чек-лист: версия после install верифицируется всегда.
 
 ---
@@ -153,7 +157,7 @@
 | — | Habits: сиротские алармы вне кэша плагина | hardCancelAll через DISABLED-компонент ScheduledNotificationReceiver; chokepoint ensureRemindersReceiverEnabled (`f73bca1`) | 2026-10-24 |
 | — | Play-флейворы крашились на сплэше (RuStore SDK в plugin-register) | Вендор-патч review/update: ленивый no-op по зонду `ru.rustore.sdk.core.Constants` | 2026-10-24 |
 | — | Release Habits/H₂O умирали на сплэше (invalid_icon) | `res/raw/keep.xml` с keep `@drawable/ic_notification` | 2026-10-24 |
-| — | Cleaner «Можно освободить 33530» без «МБ» | Разгадан: баг сборки (gen-l10n mtime-пропуск), не код и не кроп. Пересборка — на решении Владимира | 2026-10-24 |
+| — | Cleaner «Можно освободить 33530» без «МБ» | ИСТИННЫЙ корень (QA 24.10, v2.3.1): визуальный клип рендера — maxLines:1 + Flexible + clip резали хвост « МБ» при ~5-значных числах (semantic-текст был корректным!). Фикс b2f1fe8 (maxLines 2 + wrap). l10n mtime-риск (4.1) — сопутствующий, не причина | 2026-10-24 |
 
 ## Issue: Переводческий долг QR (v2.0.22)
 - `eulaBody` — EN fallback на 11 локалях (решение 26.07: юртекст автопереводом не трогаем)
