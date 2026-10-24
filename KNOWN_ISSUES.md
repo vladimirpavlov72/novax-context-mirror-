@@ -88,6 +88,50 @@
 
 ---
 
+## 4. Проблемы, вскрытые 24.10 (релизный харднинг)
+
+### 4.1 gen-l10n mtime-пропуск: устаревшие generated-файлы в релизе (24.10)
+- **Влияние:** Flutter пропускает `gen-l10n`, если generated-файлы НОВЕЕ ARB по mtime.
+  В Cleaner generated gitignored → строки из лета попадали в релизы. Вскрыто как баг
+  «Можно освободить 33530» без «МБ» в v2.3.0+4030 (на модерации RuStore с этим багом).
+  В Habits/QR/H₂O generated закоммичены — push обновляет mtime, проблемы нет.
+- **Обходное решение:** перед КАЖДОЙ релизной сборкой Cleaner принудительно
+  `flutter gen-l10n`; вериф — маркер-строкой или grep по APK-выводу на девайсе.
+- **Постоянное решение:** CI-шаг/скрипт сборки с принудительной генерацией
+  (задача вне скоупа 24.10). Пересборка Cleaner — ждёт решения Владимира.
+
+### 4.2 shrinkResources вырезает drawable, референс которого только в Dart-строке (24.10)
+- **Влияние:** release-сборки Habits и H₂O умирали на сплэше:
+  `PlatformException(invalid_icon, @drawable/ic_notification could not be found)`.
+  Debug маскировал (не шринкует). Референс — только в Dart-строке
+  AndroidInitializationSettings, aapt не видит.
+- **Обходное решение:** `android/app/src/main/res/raw/keep.xml` с
+  `<keep tools:keep="@drawable/ic_notification" />` (эталон — паттерн на оба приложения).
+- **Постоянное решение:** применено — Habits `e128fbc`, H₂O `6c8dd0c`, ревериф ок.
+  Правило: любой drawable, упомянутый только строкой в Dart, — в keep.xml.
+
+### 4.3 play-флейворы падают на сплэше: краш plugin-регистрации (24.10)
+- **Влияние:** play-сборки Habits/H₂O/QR (и Cleaner без exclude) крашились на сплэше:
+  `GeneratedPluginRegister` → `NoClassDefFoundError: RuStoreAppUpdateManagerFactory`
+  → shared_preferences channel-error. Обёртки review/update жадно инстанцировали SDK
+  в `onAttachedToEngine`, а `exclude group: 'ru.rustore.sdk'` в play-флейворах вырезает SDK.
+  Из-за краша одного плагина не регистрировались ВСЕ остальные.
+- **Обходное решение:** патч вендорных `flutter_rustore_review/update-10.5.2`:
+  зонд `Class.forName("ru.rustore.sdk.core.Constants")` в начале
+  `onAttachedToEngine` → при отсутствии SDK no-op return. Патч — ОБА плагина.
+- **Постоянное решение:** применено; play=86 классов (только ссылки, прецедент pay-SDK,
+  красная линия цела), rustore=2294. Обе сборки стартуют, UnhandledExceptions=0.
+  ⚠ Дым H₂O/QR на девайсе после патча — не прогонялся (APK-счёт классов ок) — бэклог QA.
+
+### 4.4 `adb install -r` молча не обновляет APK (downgrade silent-fail) (24.10)
+- **Влияние:** при установке APK с versionCode НИЖЕ установленного `adb install -r`
+  возвращает Success, но приложение НЕ обновляется — QA на старой версии без явного сигнала.
+- **Обходное решение:** вериф после установки: `dumpsys package <id> | grep versionCode`
+  (+ lastUpdateTime), сравнить с целевым APK.
+- **Постоянное решение:** QA-чек-лист: версия после install верифицируется всегда.
+
+---
+
 ## Архив решённых проблем
 
 | # | Проблема | Решение | Дата |
@@ -106,6 +150,10 @@
 | — | Xiaomi отменяла adb-установку | Настройка "Install via USB" добавлена в чек-лист QA | 2026-07-27 |
 | — | Habits: привычка сохранялась, но не отображалась на HomeScreen | Добавлен `_viewModel.load()` после возврата с AddHabitScreen | 2026-08-01 |
 | — | Habits: MainActivity package mismatch | Файл перенесён в `android/app/src/main/kotlin/com/novax/habits/`, package обновлён | 2026-08-01 |
+| — | Habits: сиротские алармы вне кэша плагина | hardCancelAll через DISABLED-компонент ScheduledNotificationReceiver; chokepoint ensureRemindersReceiverEnabled (`f73bca1`) | 2026-10-24 |
+| — | Play-флейворы крашились на сплэше (RuStore SDK в plugin-register) | Вендор-патч review/update: ленивый no-op по зонду `ru.rustore.sdk.core.Constants` | 2026-10-24 |
+| — | Release Habits/H₂O умирали на сплэше (invalid_icon) | `res/raw/keep.xml` с keep `@drawable/ic_notification` | 2026-10-24 |
+| — | Cleaner «Можно освободить 33530» без «МБ» | Разгадан: баг сборки (gen-l10n mtime-пропуск), не код и не кроп. Пересборка — на решении Владимира | 2026-10-24 |
 
 ## Issue: Переводческий долг QR (v2.0.22)
 - `eulaBody` — EN fallback на 11 локалях (решение 26.07: юртекст автопереводом не трогаем)
