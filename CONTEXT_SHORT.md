@@ -166,6 +166,13 @@
 
 ## Tech Reminders (CRITICAL)
 
+- **🔴 Правило versionCode Cleaner (Владимир, 25.10)**: линейка RuStore =
+  **403X** (base 203X + 2000 split-abi сдвиг; исторически +4030 опубликован).
+  ВСЕГДА: новый code > опубликованного; **имя APK = коду ВНУТРИ** (никаких
+  ручных переименований!); перед сдачей — `aapt dump badging | grep
+  versionCode`. Провал 25.10: 2.3.1 сдали как «+4031» именем, а внутри
+  был 2031 — RuStore отклонил.
+
 1. NO `generate: true` in pubspec.yaml
 2. `nullable-getter: true` in l10n.yaml
 3. Remove `const` from rebuildable widgets
