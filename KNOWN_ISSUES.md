@@ -148,6 +148,23 @@
   линейки — правило из 4.2 (keep.xml) + QA релизов только release-сборками
   холодным стартом на девайсе.
 
+### 4.6 R8 vs Gson TypeToken — релиз виснет на сплэше Android 16 (27.10)
+- **Влияние:** R8-обфускация ломает Gson TypeToken в vendored
+  flutter_local_notifications (`Missing type parameter` в
+  loadScheduledNotifications). Исключение в platform-handler → канал не
+  отвечает → Dart await вечно → ВЕЧНЫЙ СПЛЭШ. Процесс жив, FATAL нет.
+  A52 не ловит (boot-путь не дёргается), Android 16 — дёргает. Истинный
+  краш +13 на новых устройствах, скорее всего, это (не только keep.xml).
+- **Обходное решение:** proguard-rules: `-keepattributes Signature`,
+  `*Annotation*`, `-keep class com.google.gson.**`, `-keep class *
+  extends com.google.gson.reflect.TypeToken`, keep плагина. Фикс +14
+  (HOTFIX-2), QA 14T+A52 зелёный.
+- **Постоянное решение:** применено в Habits. 🔴 НЕ применено в Cleaner
+  (reminder_service!) и H₂O — тот же риск на Android 16 при
+  boot-reschedule. Добавить те же правила при следующем касании (Р-2).
+  Правило линейки: flutter_local_notifications + minify → Gson-правила
+  ОБЯЗАТЕЛЬНЫ.
+
 ---
 
 ## Архив решённых проблем
