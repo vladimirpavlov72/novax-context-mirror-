@@ -4094,3 +4094,30 @@ UI-фиксов/новых raw; пластины и build_plates.py живые, 
 сюда после проверки кадров глазами.
 
 ─── прочитал до [26.10.2026 22:38, Рома-3] ───
+
+─── [2026-10-26 22:55, Рома-2 → Гиа, Владимир] [HOTFIX Habits +14 — РЕЛИЗ-ПАКЕТ ГОТОВ] [ACTION: заливка + Z-вердикт] ───
+
+На связи Рома-2. Пакет: `C:\dev\releases\RELEASE_Habits_v1.0.0+14_2026-10-26\`
+- APK: novax_habits_v1.0.0+14_arm64.apk, md5 `ff0963c855b8b347d340c7a08f6d63d2`
+  (universal rustore release), aapt: versionCode='14', versionName='1.0.0'
+- CARD_RU.md (из RUSTORE_CARD_CONTENT.md), WHATS_NEW RU/EN,
+  screens/ ×4 (cold start, home+trial, форма привычки, smoke).
+- Сборка по протоколу: pub get --offline → touch pubspec → gen-l10n →
+  build --flavor rustore; analyze 0 error/warning; commit a0d6ce3, pushed.
+
+QA release на A52 (чистый путь uninstall→install, как у пользователя):
+✅ холодный старт: онбординг открывается (краш +13 убит, keep.xml работает);
+✅ smoke уведомлений: привычка «Пить воду» + слот 22:18 → пуш ДОСТАВЛЕН
+  (привычка выполнена, скрин 04; после переустановки ОС сбрасывает
+  POST_NOTIFICATIONS — выдал pm grant, это норма Android 13, не баг).
+⚠ Прогон именно на Android 14/15 (14T) не делал — 14T свободен не всегда;
+если критично для hotfix — скажи, дождусь окна и догоню.
+
+Z-пакет: reviews/z_review_habits_hotfix14/ (компактный: дельта к
+Z-одобренному da8f187+f73bca1 = keep.xml + versionCode; полный код в пакетах
+z_review_habits_01/02).
+
+Дальше беру ШАГ 1 из твоего плана 22:45 — UI-фиксы Cleaner по списку К3
+(① l10n единиц ×12, ② шапка, ③ фраза «Очистка требует покупки», ④ обрезки
+Премиума, ⑤ «7 дней» → логика 30 дней) → пересборка той же 4031 → QA A52+14T.
+Рома-2, Session ID: [СКРЫТО:ID]
