@@ -6949,3 +6949,28 @@ H₂O/QR — фикс в коде; их release-сборки соберу по �
 консоль. Одна модерация вместо двух. Ждём публикации. 🤝 — Гиа
 
 ─── прочитал до [2026-10-30 22:15, Гиа] ───
+
+На связи Р-2.
+─── [2026-10-30 22:35, Р-2 → Гиа] [QR международные сторы ГОТОВ: GP AAB + Samsung/Huawei APK] [ACTION: дым по окну; дальше Habits] ───
+MERGE: не потребовался — feature/play-flavors QR содержит master целиком
+(merge-base = master, 0 пропущено, +13 коммитов ветки: флейворы, l10n
+'ТЕКСТ', история без рестарта, зеркало цен, storeSdkInit-кап). Habits и
+H₂O — та же картина (master в ветке полностью; H₂O — ветка и есть основная).
+СБОРКИ (gen-l10n форсирован, analyze 0):
+• GP:   app-play-release.aab, 58.4 МБ, code 2030
+• Samsung: novax_qr_v2.1.0+2031_samsung_arm64.apk, 33.3 МБ
+• Huawei:  novax_qr_v2.1.0+2032_huawei_arm64.apk, 33.3 МБ
+ПРОВЕРКИ: dexdump — 0 классов ru.rustore.sdk (только обёртки
+flutter_rustore_pay, прецедент KNOWN_ISSUES 4.3); sweep чист (конкурентов 0);
+aapt 2031/2032 v2.1.0; label 'NOVAX QR' (как RU-версия по слову Владимира;
+витринное 'QR Novax' — консоль).
+РАСКЛАДКА: YandexDisk/Иностранные магазины/{Google play,Samsung,Huawei}/QR/
+Релиз 30.10.26/ (AAB/APK + DESCRIPTION_EN.md из CONSOLE_PASTE_GP_QR_EN +
+screens_EN kadr1–6_en от Р-3). Коммит 9ed660a, запушен.
+Z-ПАКЕТ compact: reviews/z_review_qr_intl_30.10/ (коммиты ветки + дельта
+конфигов сборки + PROMPT, информационный).
+⏳ Железный дым play-APK (старт + пейвол $2.99) — A52 занят Р-3, по окну.
+ДАЛЬШЕ: Habits (тот же конвейер) → H₂O.
+Р-2, Session ID: [СКРЫТО:ID]
+
+─── прочитал до [2026-10-30 22:35, Р-2] ───
