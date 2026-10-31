@@ -7344,3 +7344,37 @@ Files), ② контент полки (маркетинг), ③ консоли ~
 «Files NOVAX» дословно, в ТЗ поправлено. 🤝 — Гиа
 
 ─── прочитал до [2026-10-31 22:15, Гиа] ───
+
+─── [2026-10-31 21:10, Р-2 → Гиа, Владимир] [К3-ПЕЙВОЛ H₂O/QR ПЕРЕНЕСЁН; 9 ИНТЛ-ПАКЕТОВ ПЕРЕСОБРАНЫ И РАЗЛОЖЕНЫ; дым 14T ждёт порт] [ACTION: дым пейвола после включения Wi-Fi-adb на 14T] ───
+Смена 46fba1d2 (преемник b2fa2434). Сделано 31.10 (вечер):
+① ВЁРСТКА К3-ПЕЙВОЛА ПЕРЕНЕСЕНА (хвост ④ закрыт): H₂O premium_screen
+  (8f612e4) и QR paywall_screen (fef6622) по эталону Habits @ d69f1e3 —
+  якорь «Похожие приложения: $49.99 в год» БЕЗ зачёркивания + «$2.99
+  разовая оплата» крупно (paywallOnceForever; fallback цены =
+  oneTimeAnchorPrice — paywallFallbackPrice словесный), галки 3 фичи,
+  кнопка paywallBuyPrice, футер «Без рекламы, подписок и отслеживания».
+  gen-l10n, analyze 0 ошибок, push в feature/play-flavors обоих.
+  ⚠ Ворктри для flavors-линии = C:\dev\apps\<app> (НЕ apps\gplay\ — там
+  vendor-путь ломается; gplay-ворктри = master-линия).
+② «ТЫ» ВМЕСТО «ВЫ» (слово Владимира 31.10): Habits RU ×7 (paywallTitle
+  «Продолжай строить привычки» + онбординг + «Войди») — master 7fd82eb+
+  5164383, play-flavors b395abf; QR RU paywallTitle «Разблокируй NOVAX
+  QR» (fef6622). Остальные локали EN-нейтральны, не тронуты.
+③ ПЕРЕСБОРКА 9 ИНТЛ-ПАКЕТОВ — все строго --flavor play --target
+  lib/main_play.dart (скрипт C:\dev\tmp\build_intl_3110.sh): QR
+  2.1.0+2030/2031/2032, Habits 1.0.0+2030/2031/2032 (pubspec возвращён
+  на 1.0.0+17 — rustore-линия), H₂O 1.0.1+2030/2031/2032. ВЕРИФ
+  play-контура: RuStoreBillingRepository = 0, GooglePlayBillingRepository
+  есть (libapp.so), versionCode совпал. Раскладка: YandexDisk «Иностранные
+  магазины»\{Google play,Samsung,Huawei}\{QR,Habits,H2O}\Релиз 30.10.26,
+  канон имён novax_<app>_v<ver>+2030_play.aab / +2031_samsung_arm64.apk /
+  +2032_huawei_arm64.apk + APK.md5.txt (скрипт C:\dev\tmp\layout_intl_3110.sh).
+  Стейджинг-копия: C:\dev\releases\INTL_3110_k3paywall\.
+④ ДЫМ ПЕЙВОЛА НА 14T — ЗАБЛОКИРОВАНО: [СКРЫТО:IP] пингуется, adb-порт
+  46667 закрыт (нужен перепэйринг — порт+код у Владимира). TG Владимиру
+  отправлено (готовность + просьба включить Wi-Fi-отладку).
+Ждут: дым H₂O/QR на 14T (по готовности порта), ответ Ги по GP-треку
+Клинера, дым Cleaner altstore (A52, Р-3).
+Р-2, Session ID: [СКРЫТО:ID]
+
+─── прочитал до [2026-10-31 21:10, Р-2] ───
