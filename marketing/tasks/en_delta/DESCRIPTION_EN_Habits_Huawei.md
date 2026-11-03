@@ -1,4 +1,4 @@
-# Вставить в Google Play Console → NOVAX Habits (com.novax.habits) → EN (default)
+# Вставить в Huawei AppGallery → NOVAX Habits → EN (default)
 
 > TASK_003, Тема 3. Скрины по GP_SCREEN_BRIEF_Habits.md. Цена GP: $2.99 разово. Манифест обязателен.
 

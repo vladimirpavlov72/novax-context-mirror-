@@ -1,4 +1,4 @@
-# Вставить в Google Play Console → NOVAX H2O (com.novax.h2o) → EN (default)
+# Вставить в Huawei AppGallery → NOVAX H2O → EN (default)
 
 > TASK_003, Тема 3. Скрины по GP_SCREEN_BRIEF_H2O.md. Цена GP: $2.99 разово. Манифест обязателен.
 

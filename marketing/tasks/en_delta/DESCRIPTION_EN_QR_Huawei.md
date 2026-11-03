@@ -1,4 +1,4 @@
-# Вставить в Google Play Console → NOVAX QR (com.novax.qrscanner) → EN (default)
+# Вставить в Huawei AppGallery → NOVAX QR → EN (default)
 
 > TASK_003, Тема 3: первый экран без скролла — единственное, что видят все.
 > Скрины ≫ баннер; скрин 1 = ответ на боль-интент (см. GP_SCREEN_BRIEF_QR.md).
@@ -32,7 +32,7 @@ What it does:
 • Light and dark theme
 
 Honest price:
-Free for 7 days, then $2.99 once. No subscription, no ads, no hidden fees. Not for you? Google Play's refund has you covered.
+Free for 7 days, then $2.99 once. No subscription, no ads, no hidden fees. Not for you? The store's refund policy has you covered.
 Similar apps: $49.99/year. Our app: $2.99 once. Forever.
 
 We hate subscriptions. Our app costs $2.99 once. Forever.
