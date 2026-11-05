@@ -19,7 +19,7 @@
 | 05_scan_progress | EN, светлая | прогресс-бар, «283 files», «Data read», «Current folder», Cancel |
 | 06_home_scanned | EN, светлая | итог «12056 files · 115.3 GB», категории с данными |
 | 07_images_feed | EN, светлая | лента Images с миниатюрами, сорт по размеру |
-| 08_selection_mode | EN, светлая | «1 selected», панель 5 кнопок, деструктивное ПОСЛЕДНИМ |
+| 08_selection_mode | EN, светлая | «1 selected», панель 5 кнопок, деструктивное ПОСЛЕДНИМ (подписи однострочные) |
 | 09_search_results | EN, светлая | запрос «2022», результаты с путём папки |
 | 10_folders_root | EN, светлая | проводник, корень /storage/emulated/0 |
 | 11_folder_level | EN, светлая | Android → .Trash + media, честный путь |
@@ -82,8 +82,9 @@
 ## Целостность
 
 - SHA-256 шести файлов выше — в `SHA256SUMS_R3.1.txt`.
-- Остальные 20 кадров серии и icon_512.png НЕ тронуты (git: только
-  4 замены + 2 добавления; подтверждено `git status` по папке).
+- НЕ тронуты (git: только 4 замены + 2 добавления, `git status` по
+  папке): 19 серийных кадров (все, кроме 14), b2_panel3_de_scale135,
+  rtl_ar_home, clean_home_light_ru, icon_512.png.
 - Код bidi-изоляции: lib/utils/bidi.dart + применение в ленте, поиске,
   корзине, дереве, карточке «Папки»; Directionality LTR в диалоге
   переименования. Тест 151/151, analyze 0. Коммит `2442867` (push ✓).
