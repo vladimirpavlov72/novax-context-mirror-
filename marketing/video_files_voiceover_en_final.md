@@ -21,11 +21,13 @@
 | 42–50 | The Folders tab is a plain explorer: open a folder, see what's inside and how much it takes. | 18 | 135 |
 | 50–62 | ★ Files go to Trash first. Changed your mind? Tap Restore to bring them back. Empty trash asks for confirmation before deleting forever. | 22 | 110 |
 | 62–70 | The Operations log shows what was deleted or restored, and when. | 11 | 83 |
-| 70–78 | ★ No full access? Choose one folder and work only with it. Revoke access anytime in your phone settings. | 18 | 135 |
+| 70–78 | ★★ No full access? Choose your folders and work only with them. Revoke access anytime in your phone settings. | 18 | 135 |
 | 78–86 | Files NOVAX: every file in plain sight, deletion only through the trash and only with your say-so. Works offline. | 19 | 143 |
 | 86–90 | Get the app — link in the description. | 7 | 105 |
 
-**Итого: 177 слов (лимит 210), максимум участка 143 слов/мин (лимит 145).**
+> **Итого: 177 слов (лимит 210), максимум участка 143 слов/мин (лимит 145).**
+> Правка 12.11 (вердикт К3): участок 70–78 — «Choose your folders» (множественное
+> число под кадр с 3 папками), форма К3 принята дословно.
 
 ## Полный текст одним блоком (для диктора)
 
@@ -39,13 +41,15 @@ date. The Folders tab is a plain explorer: open a folder, see what's inside
 and how much it takes. Files go to Trash first. Changed your mind? Tap
 Restore to bring them back. Empty trash asks for confirmation before deleting
 forever. The Operations log shows what was deleted or restored, and when. No
-full access? Choose one folder and work only with it. Revoke access anytime
-in your phone settings. Files NOVAX: every file in plain sight, deletion only
+full access? Choose your folders and work only with them. Revoke access
+anytime in your phone settings. Files NOVAX: every file in plain sight, deletion only
 through the trash and only with your say-so. Works offline. Get the app —
 link in the description.
 
 ## Что изменено против 7498fdf
 
+- 12.11: участок 70–78 заменён по вердикту К3: «Choose your folders and
+  work only with them» (мн. число под кадр с 3 папками; пометка ★★).
 - 0–4, 4–8, 12–22, 22–32, 50–62, 70–78 — замены К3 приняты дословно (★).
 - 32–42: −6 слов (убран повтор "list of all photos…", сжато до 18 слов).
 - 42–50: −1 слово ("file explorer" → "explorer", 18 слов).
