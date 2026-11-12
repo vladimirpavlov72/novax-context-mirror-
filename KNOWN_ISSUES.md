@@ -287,3 +287,10 @@ Cleaner duplicatesGroupLine 27.10.
   (биллинг/SDK после первого кадра, паттерн storeSdkInit-timeout есть);
   ③ цель: ≤3 с на 14T. Файлы замерить после заливки internal (Владимир
   или A52-замер Р-5).
+
+## 10.11.26: Play Billing Library 6.2.0 — блокер GP internal (Files)
+- Симптом: консоль отклоняет выпуск «billing 6.2.0, нужен ≥ 8.0.0» (дедлайн v6 прошёл 01.11.2025).
+- Источник: vendored in_app_purchase_android-0.3.6+7 → billingclient 6.2.0.
+- Фикс: поднять vendored-пакет до версии с PBL ≥ 8.0.0; в merged manifest
+  должна быть строка com.google.android.play.billingclient.version.
+- Проверить тот же ловушный вопрос в play-флейворе Cleaner (G1) и всей линейке.
