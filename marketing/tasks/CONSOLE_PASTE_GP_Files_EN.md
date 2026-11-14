@@ -32,7 +32,7 @@ WHAT IT DOES
 • Trash — deleted files rest there until you restore or empty it
 • Operations log — every action recorded with a date
 • 12 languages, light and dark theme
-• No ads. No subscriptions or in-app purchases. The file manager works offline.
+• Works fully offline
 
 We hate subscriptions. This app has no in-app purchases at all — you buy it once and it's yours.
 Your files never leave your device. No account, no analytics, no cloud.
