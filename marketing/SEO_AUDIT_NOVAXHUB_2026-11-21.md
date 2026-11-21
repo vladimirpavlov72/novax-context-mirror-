@@ -55,3 +55,30 @@
 2. Рома: пункты 4–10 (тексты и разметка) — сегодня.
 3. Р-5: twitter:card, ссылка на llms.txt в head, пустые href.
 4. Рома: повторный аудит + --render после правок (CWV).
+
+---
+
+## ВЫПОЛНЕНО 21.11 (виза Гиа — правки сайта сам, репо novaxhub.github.io)
+
+- 8730bfd: canonical/sitemap/og/JSON-LD/ссылки ×195 — .ru → .app (весь сайт);
+  description главной 157→135 зн.; twitter:card + link llms-txt в head;
+  GP-плейсхолдеры href="#" ×3 → честные «Soon on Google Play»;
+  контакт [СКРЫТО:EMAIL] → [СКРЫТО:EMAIL] ×3 (§19, на .app висел РФ-емейл!);
+  llms.txt переписан под GP-контур (EN, без ₽/RuStore).
+- 5b414cd: descriptions privacy/privacy-en/privacy-files/eula-files → ≤150 зн.;
+  twitter:card + JSON-LD WebPage на все 4 легальные страницы.
+- РЕЗУЛЬТАТ: 92 → 93/100. Категории: Crawlability 91→96, Social 75→78,
+  Core 99→100. Ошибки sitemap-domain, canonical-loop/drift, twitter-card,
+  пустые href — ЗАКРЫТЫ. Ошибки description-pixel-width — ЗАКРЫТЫ все 5 стр.
+
+## ОСТАТОК (не наша зона/не наша вина)
+
+1. Security headers (HSTS, X-Frame-Options, X-Content-Type-Options, redirect
+   http→https 301 на http) — ограничение GitHub Pages. Частично лечится
+   галкой «Enforce HTTPS» в настройках репо (зона СА/Владимир), полностью —
+   при переходе фронта на Cloudflare.
+2. content-word-count «28 слов» на 3 RU-страницах — ЛОЖНОЕ срабатывание:
+   экстрактор правила считает в основном латиницу; фактически на страницах
+   208–241 слово (privacy 220, privacy-files 208, eula-files 241). Google
+   кириллицу считает. Фиксировать не требуется.
+3. Не мерялось (нужен --render): Core Web Vitals — после playwright chromium.
